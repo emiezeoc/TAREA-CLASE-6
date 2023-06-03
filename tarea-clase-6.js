@@ -3,6 +3,7 @@ const $inputCantidadIntegrantes = document.querySelector("#cantidad-integrantes"
 const $botonCalcular = document.querySelector("#boton-calcular")
 const $botonResetear = document.querySelector("#boton-resetear")
 const $resultados = document.querySelector("#resultados")
+const nodoFormularioEdades =document.querySelector("#formulario-edades")
 
 
 $botonSiguiente.onclick = function(){
@@ -76,3 +77,13 @@ function ocultarBotonCalcular() {
 
     return false;
 }
+
+$botonResetear.onclick = function() {
+    $resultados.textContent = ""
+    $botonSiguiente.className = ""
+    nodoFormularioEdades.innerHTML = ""
+
+    return false;
+
+}
+
