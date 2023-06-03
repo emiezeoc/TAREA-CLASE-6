@@ -58,6 +58,7 @@ function calcularResultados(arrayEdades){
     const promedioEdades = promedio(arrayEdades);
 
     $resultados.textContent = `La mayor edad es ${mayorEdad}, la menor edad es ${menorEdad}, y el promedio de edades es ${promedioEdades}`
+    $resultados.className = ""
 
     return mayorEdad, menorEdad, promedioEdades;
 }
@@ -80,10 +81,10 @@ function ocultarBotonCalcular() {
 
 $botonResetear.onclick = function() {
     $resultados.textContent = ""
+    $resultados.className = "oculto"
     $botonSiguiente.className = ""
     nodoFormularioEdades.innerHTML = ""
 
     return false;
-
 }
 
